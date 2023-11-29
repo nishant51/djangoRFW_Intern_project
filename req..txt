@@ -1,0 +1,42 @@
+Backend Intern Shortlisting Assignment
+Note: Please submit the completed task along with the Git repository link by December 1, 2023,
+via email. The submission should include the assigned task and the link to your Git repository.\
+Objective:
+Develop a simple backend application using a server-side framework of your choice.
+ This assignment aims to evaluate your understanding of backend development, API design, and database integration.
+
+Requirements:
+1. API Endpoints:  Create RESTful API endpoints for tasks with basic CRUD operations
+ (Create, Read, Update, Delete).Each task should have at least a title and a status (completed or pending).
+
+2. Database Integration:  Use a relational database (e.g., SQLite, MySQL, PostgreSQL) to store task data.
+Implement a database schema for tasks.Connect your backend application to the database and perform CRUD operations.
+
+3. Validation: Implement validation to ensure that required fields are not empty.
+Handle errors gracefully and return appropriate HTTP status codes.
+
+
+4. API Documentation: Provide clear and concise documentation for your API. 
+Include information about how to make requests, expected responses, and any authentication requirements.
+
+
+ Authentication (Bonus):Implement a simple authentication mechanism  JWT to secure  API
+Include endpoints that require authentication for access.
+
+
+Testing (Bonus): Write unit tests for critical parts of your application.
+
+
+Submission Guidelines: Create a Git repository for your project.
+
+Include a README.md file with instructions on how to set up and run the backend application.
+Clearly comment your code to explain the logic and any assumptions made.
+
+
+Evaluation Criteria:
+Code structure and organization.
+Backend development concepts understanding and implementation.
+API design and documentation.
+Database integration and data management.
+Error handling and validation.
+Bonus tasks completion.
