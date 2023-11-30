@@ -35,7 +35,6 @@ pip install -r requirements.txt
 
 ### Database Setup
 Edit the DATABASES configuration in myproject/settings.py to match your database setup.
-
 Example using SQLite:
 ```bash
 python
@@ -51,6 +50,7 @@ DATABASES = {
 
 ### Run Migrations
 ```bash
+python manage.py makemigrations
 python manage.py migrate 
 ```
 ### Create Superuser (Optional)
@@ -73,13 +73,39 @@ The application will be available at http://localhost:8000/.
 ```bash
 python manage.py test app.tests
 ```
-### Additional Notes
 
-# 1) Make sure to configure ALLOWED_HOSTS in myproject/settings.py for production deployment.
+## Testing with Postman
+#### Obtain JWT Token
+        Send a POST request to the authentication endpoint (/api/token/) with your username and password to obtain a JWT token. Use the token for subsequent authenticated requests.
 
-# 2) For secure authentication, obtain a JWT token by sending a POST request to the authentication endpoint (/api/token/).
+Example:
 
-# 3) Additional customization can be done in app/models.py, app/serializers.py, and app/views.py.
+```bash
+curl -X POST -d "username=<your_username>&password=<your_password>" http://localhost:8000/api/token/
+# Include the obtained token in the Authorization header for authenticated requests:
+
+Authorization: Bearer <your_access_token>
+# Testing Endpoints with Postman
+```
+
+#### Use Postman to test the API endpoints:
+
+  1) Import the provided Postman collection (postman_collection.json) into your Postman workspace.
+  2) Update the environment variables with your local server information and token.
+  3) Generate API Documentation with Postman
+
+#### Open Postman.
+ 1) Create a new workspace and import the collection (postman_collection.json).
+ 2) Click on "API" in the left sidebar and select "API Documentation."
+ 3)  Postman will generate API documentation based on your collection.
+
+## Additional Notes
+
+ 1) Make sure to configure ALLOWED_HOSTS in myproject/settings.py for production deployment.
+
+ 2) For secure authentication, obtain a JWT token by sending a POST request to the authentication endpoint (/api/token/).
+
+ 3) Additional customization can be done in app/models.py, app/serializers.py, and app/views.py.
 
 
 
