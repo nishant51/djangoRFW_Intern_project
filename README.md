@@ -66,6 +66,7 @@ python manage.py runserver
 The application will be available at http://localhost:8000/.
 
 ### API Documentation
+```
  the documentation link is given here : click here
 
 
@@ -75,8 +76,11 @@ python manage.py test app.tests
 ```
 
 ## Testing with Postman
+```
+
 #### Obtain JWT Token
-        Send a POST request to the authentication endpoint (/api/token/) with your username and password to obtain a JWT token. Use the token for subsequent authenticated requests.
+Send a POST request to the authentication endpoint (/api/token/) 
+with your username and password to obtain a JWT token. Use the token for subsequent authenticated requests.
 
 Example:
 
