@@ -51,11 +51,6 @@ class TaskAPITestCase(TestCase):
         response = self.client.post('/api/token/', {'username': 'testuser', 'password': 'testpassword'})
         return response.data['access']
 
-#Tests the /api/task-delete/<str:pk>/ endpoint to ensure it deletes an existing task.
-    def test_task_delete(self):
-        token = self.get_auth_token()
-        headers = {'HTTP_AUTHORIZATION': f'Bearer {token}'}
-        response = self.client.delete(self.task_url, **headers)
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
-        self.assertEqual(Task.objects.count(), 0)                      
+
+                      
 

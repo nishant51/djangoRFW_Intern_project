@@ -38,6 +38,8 @@ def obtain_token(request):
 @api_view(['GET'])
 def apioverview(request):
         api_urls = {
+        'obtail_token':'/token/',
+        'authenticated_endpoint':'/authenticated/',
         'list':'/task-list/',
         'create':'/task-create/',
         'update ':'/task-update/<str:pk>/',
