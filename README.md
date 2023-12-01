@@ -1,6 +1,6 @@
 # Django Backend Application
 
-This Django backend application provides API endpoints for managing tasks with basic CRUD operations.
+This Django backend application provides API endpoints for managing tasks with basic CRUD operations with jwt validation,error_Status and few unit test .
 
 ## Setup and Run Instructions
 
@@ -29,11 +29,13 @@ python -m venv venv
 source venv/bin/activate
 ```
 ### Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Database Setup
+
 Edit the DATABASES configuration in myproject/settings.py to match your database setup.
 Example using SQLite:
 ```bash
@@ -49,10 +51,12 @@ DATABASES = {
 
 
 ### Run Migrations
+
 ```bash
 python manage.py makemigrations
 python manage.py migrate 
 ```
+
 ### Create Superuser (Optional)
 
 Create an admin superuser to access the Django admin interface:
@@ -60,6 +64,7 @@ Create an admin superuser to access the Django admin interface:
 python manage.py createsuperuser
 ```
 ## Run the Application
+
 ```bash
 python manage.py runserver
 ```
@@ -67,16 +72,16 @@ The application will be available at http://localhost:8000/.
 
 ### API Documentation
 ```
- the documentation link is given here : click here
-
+ the documentation link is given here : [click here](https://github.com/nishant51/djangoRFW_Intern_project/blob/main/Task%20Management%20API%20Documentation.docx.pdf)
+```
 
 ### Testing
+
 ```bash
 python manage.py test app.tests
 ```
 
 ## Testing with Postman
-```
 
 #### Obtain JWT Token
 Send a POST request to the authentication endpoint (/api/token/) 
